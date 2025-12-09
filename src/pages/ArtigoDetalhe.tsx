@@ -807,12 +807,11 @@ const ArtigoDetalhe = () => {
       />
       <JsonLd
         type="article"
-        data={{
-          headline: article.title,
-          description: content.metaDescription,
-          datePublished: article.date,
-          dateModified: article.date,
-        }}
+        title={article.title}
+        description={content.metaDescription}
+        datePublished={article.date}
+        dateModified={article.date}
+        author="Equipe Melhores Motos Infantil Elétrica"
       />
       
       <div className="min-h-screen bg-background">
