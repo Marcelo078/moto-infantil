@@ -64,7 +64,12 @@ const ProdutoDetalhe = () => {
         description={`${product.shortDescription}. Confira as melhores ofertas de ${product.name}. ${product.keywords.slice(0, 3).join(", ")}.`}
         keywords={product.keywords.join(", ")}
       />
-      <JsonLd type="product" data={jsonLdData} />
+      <JsonLd 
+        type="product" 
+        name={product.name}
+        description={product.shortDescription}
+        brand={product.name.includes("BMW") ? "BMW" : product.name.includes("Triumph") ? "Triumph" : "Importway"}
+      />
       
       <div className="min-h-screen bg-background">
         <Header />
